@@ -61,17 +61,10 @@ body {
     margin-top: 35px;
     padding: 35px;
     background-image: url(../images/bg-image.png);
-    background-size: 93%;
-    height: 10.4vw;
-
+    background-size: 100%;
     text-align: center;
     color: white;
 }
-
-.h1Verde {
-    padding-top: 50px;
-}
-
 
 
 /*MAIN_PART1*/
