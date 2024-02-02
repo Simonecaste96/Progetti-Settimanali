@@ -1,0 +1,179 @@
+html,
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8ECEE;
+}
+
+/*HEAD*/
+.contenitoreLogo {
+    background-color: #222F3F;
+}
+
+.logo {
+    width: 4vw;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.linkUtili {
+    background-color: #364759;
+    color: white;
+    display: flex;
+    margin: 0px;
+}
+
+.pUtili {
+    color: white;
+    margin: 10px;
+    margin-left: 20px;
+
+
+}
+
+/*MAIN*/
+
+.main {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.arancione {
+    background-color: #F56600;
+    text-align: center;
+    margin-top: 35px;
+
+
+}
+
+.pArancione {
+    padding: 10px;
+    color: white;
+    font-size: x-large;
+
+
+}
+
+.verde {
+    margin-top: 35px;
+    padding: 35px;
+    background-image: url(../images/bg-image.png);
+    background-size: 93%;
+    height: 10.4vw;
+
+    text-align: center;
+    color: white;
+}
+
+.h1Verde {
+    padding-top: 50px;
+}
+
+
+
+/*MAIN_PART1*/
+.main1 {
+    margin-top: 35px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.h2 {
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.contenitoreTitolo {
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.imgUnite {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.imgPrincipali {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px rgb(206, 205, 205);
+    margin: 20px;
+}
+
+
+/*MAIN_PART2*/
+.contenitoreImgGrande {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.imgGrande {
+    width: 100%;
+
+}
+
+.linkImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-bottom:20px;
+}
+
+.title {
+    color: black;
+    font-weight: normal;
+    font-size: large;
+    margin-bottom: 0;
+
+}
+
+.p {
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #539DB0;
+    font-weight: bold;
+
+}
+
+
+/*FOOTER*/
+.footer {
+    text-align: center;
+    background-color: #364759;
+
+}
+
+.aFooter {
+    padding: 20px;
+    margin: 0;
+}
+
+.imgFooter {
+    text-align: center;
+    background-color: #222F3F;
+
+}
+
+.a {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+
+.logoFooter {
+
+    width: 200px;
+    padding: 60px;
+}
