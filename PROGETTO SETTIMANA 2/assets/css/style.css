@@ -68,7 +68,7 @@ body {
 
 
 /*MAIN_PART1*/
-.main1 {
+.centro {
     margin-top: 35px;
     background-color: white;
     display: flex;
@@ -163,6 +163,7 @@ margin-bottom:20px;
     font-weight: bold;
     font-size: large;
     color: white;
+    text-decoration: none;
 }
 
 .logoFooter {
