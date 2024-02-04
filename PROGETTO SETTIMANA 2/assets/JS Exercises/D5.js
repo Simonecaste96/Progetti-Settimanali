@@ -91,6 +91,17 @@ else{
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
+ var i=0;
+while(i < numericArray.length && numericArray[i]!==66){
+  console.log(numericArray[i])
+  i++;
+  
+}
+  
+
+  
+    
+ 
 
 
 /* ESERCIZIO 10
@@ -98,4 +109,5 @@ const numericArray = [
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ['g', 'n', 'u', 'z', 'd']
+
+
