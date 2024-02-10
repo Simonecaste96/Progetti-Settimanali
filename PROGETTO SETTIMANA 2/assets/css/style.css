@@ -9,11 +9,12 @@ body {
 /*HEAD*/
 .contenitoreLogo {
     background-color: #222F3F;
+    width: 100%;
 }
 
 .logo {
-    width: 4vw;
-    margin-left: 20px;
+    width: 100px;
+    margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: start;
@@ -22,14 +23,16 @@ body {
 .linkUtili {
     background-color: #364759;
     color: white;
+    width:100%;
     display: flex;
+    justify-content: start;
     margin: 0px;
 }
 
 .pUtili {
     color: white;
     margin: 10px;
-    margin-left: 20px;
+    
 
 
 }
@@ -37,8 +40,8 @@ body {
 /*MAIN*/
 
 .main {
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 100%;
+  
 }
 
 .arancione {
@@ -73,6 +76,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .h2 {
@@ -84,21 +88,28 @@ body {
 .contenitoreTitolo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
 
 
 }
 
 .imgUnite {
-    display: flex;
-    justify-content: center;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
 }
 
 .imgPrincipali {
-    width: 100%;
-    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 10px;
     box-shadow: 10px 10px 10px rgb(206, 205, 205);
     margin: 20px;
 }
