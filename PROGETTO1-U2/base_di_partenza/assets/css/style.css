@@ -45,16 +45,19 @@ html, body{
 header{
     display: flex;
     height: 6vh;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: solid 1px;
     background-color: #ffc017;
     font-family: roboto;
 }
+header img {
+width: 200px;
+}
 header nav{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 45%;
 }
 header nav p {
     margin-left: 30px;
@@ -85,17 +88,17 @@ justify-content: start;
 }
 .h1{
     display: flex;
-   align-items: center;
-   margin: 100px;
    align-items: start;
+   margin-left:20px ;
+
    
 }
 .h1 h1{
- scale: 2.4;
+ font-size:4em;
  width: 100%;
- margin: 15px auto;
+ margin: 0;
  display: flex;
- justify-content: center;
+ justify-content: start;
  font-family: Spectral;
  font-weight: 400;
  letter-spacing: -2px;
@@ -261,6 +264,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     font-family: Roboto;
+    color: rgb(204, 202, 202);
 }
 .linkUtili div{
     display: flex;
@@ -274,7 +278,7 @@ height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
-color: gray;
+color: rgb(204, 202, 202);
 font-weight: normal;
 font-size: small;
 }
@@ -315,8 +319,87 @@ z-index: 1000;
 
 
 /*----MEDIA QUERY--*/
+@media screen and (max-width:576px) {
 
 
+
+
+header{ 
+width: 100%;   
+}
+header img {
+    margin-left:20px ;
+width: 150px;
+}
+header nav{
+ width: 50%;  
+}
+header nav :nth-child(1){
+display: none;
+}
+
+header nav :nth-child(2){
+    display: none;
+    }
+    header nav :nth-child(3){
+        display: none;
+        }
+        .svg{
+            display: none;
+        }
+        .contenitoreSottoHeader .h1{ 
+    
+          width: 100%;
+          margin-left: 20px;
+          height: 40vh;
+          
+        }
+        
+        .h1 h1{
+        width: 100%;
+        font-size: 5em;
+        }
+        .h1 h3{
+         width: 65%   
+        }
+      
+  main span{
+    width: 100%;
+    justify-content: start;
+  }
+.tendenze{
+ display: block;
+
+
+}
+.card{
+ width: 100%;
+}
+.profilo p{
+width: 100%;
+
+}
+#contenitoreGenerale{
+flex-direction: column-reverse;
+}
+.imgTesto{
+    width: 200px;
+    padding: 0;
+}
+
+.contenitoreNtzPrincipale{
+
+}
+.linkUtili{
+width: 100%;
+border-bottom:solid 1px;
+
+}
+.linkUtili2 a{
+    display: none;
+}
+
+}
 
 
 
