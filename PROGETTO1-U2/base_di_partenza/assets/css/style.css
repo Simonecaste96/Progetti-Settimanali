@@ -45,13 +45,14 @@ html, body{
 header{
     display: flex;
     height: 6vh;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: solid 1px;
     background-color: #ffc017;
     font-family: roboto;
 }
 header img {
 width: 200px;
+
 }
 header nav{
     display: flex;
@@ -89,19 +90,19 @@ justify-content: start;
 .h1{
     display: flex;
    align-items: start;
-   margin-left:20px ;
+   margin-left:150px ;
 
    
 }
 .h1 h1{
- font-size:4em;
+ font-size:4.7em;
  width: 100%;
  margin: 0;
  display: flex;
  justify-content: start;
  font-family: Spectral;
  font-weight: 400;
- letter-spacing: -2px;
+ letter-spacing: -5px;
  
 }
 
@@ -118,8 +119,8 @@ justify-content: start;
     border-radius: 30px;
     font-family: Roboto;
 }
-.h1 h3:first-child{
-
+.h1 h3{
+margin-top:0px ;
 }
 
 .contenitoreSottoHeader .h1{
@@ -325,11 +326,12 @@ z-index: 1000;
 
 
 header{ 
-width: 100%;   
+width: 100%; 
+justify-content: space-between;  
 }
 header img {
-    margin-left:20px ;
 width: 150px;
+margin-left: 20px;
 }
 header nav{
  width: 50%;  
@@ -360,7 +362,8 @@ header nav :nth-child(2){
         font-size: 5em;
         }
         .h1 h3{
-         width: 65%   
+         width: 65%;
+         font-weight: 400;   
         }
       
   main span{
@@ -381,14 +384,17 @@ width: 100%;
 }
 #contenitoreGenerale{
 flex-direction: column-reverse;
+padding: 0;
 }
 .imgTesto{
     width: 200px;
     padding: 0;
 }
 
-.contenitoreNtzPrincipale{
 
+.contenitoreNtzPrincipale{
+    width: 100%;
+    
 }
 .linkUtili{
 width: 100%;
