@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body class="bg-black align-items-lg-center">
@@ -27,19 +27,29 @@
         <div class="collapse navbar-collapse justify-content-lg-around" id="navbarNavDropdown">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link active text-secondary " aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-secondary " aria-current="page" href="#">
+                <p class="m-0">Home</p>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">Tv Shows</a>
+              <a class="nav-link text-secondary" href="#">
+                <p class="m-0">Tv Shows</p>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">Movies</a>
+              <a class="nav-link text-secondary" href="#">
+                <p class="m-0">Movies</p>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">Recently Added</a>
+              <a class="nav-link text-secondary" href="#">
+                <p class="m-0">Recently Added</p>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">My List</a>
+              <a class="nav-link text-secondary" href="#">
+                <p class="m-0">My List</p>
+              </a>
             </li>
           </ul>
           <ul class="d-flex d-none d-lg-inline-flex">
@@ -51,9 +61,9 @@
                 aria-expanded="false">
                 <img id="avatar" src="assets/img/icon/avatar.png" />
               </a>
-              <ul class="dropdown-menu bg-black">
-                <li><a class="dropdown-item text-secondary bg-black" href="profilo.html" target="_blank"><img src="assets/img/icon/avatar.png"
-                      class="w-25" />&nbsp; Simone</a></li>
+              <ul id="drop" class="dropdown-menu bg-black">
+                <li><a class="dropdown-item text-secondary bg-black" href="profilo.html" target="_blank"><img
+                      src="assets/img/icon/avatar.png" class="w-25" />&nbsp; Simone</a></li>
                 <li><a class="dropdown-item text-secondary bg-black" href="#">Manage Profiles</a></li>
                 <li><a class="dropdown-item text-secondary bg-black" href="#">Account</a></li>
                 <li><a class="dropdown-item text-secondary bg-black" href="#">Help Center</a></li>
@@ -90,43 +100,50 @@
     </div>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active d-lg-flex">
-          <img src="assets/img/media/media10.jpg" class=" w-50" alt="...">
-
-
-          <img src="assets/img/media/media1.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media2.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media3.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media4.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media5.webp" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media12.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media16.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2  col-md-2 p-1">
+              <img src="assets/img/media/media30.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media24.jpg" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-        <div class="carousel-item d-lg-none">
-          <img src="assets/img/media/media20.jpg" class="d-block w-50" alt="...">
-
-
-          <img src="assets/img/media/media15.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media31.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media15.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media16.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media17.jpg" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media26.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media11.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media24.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media14.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media25.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media18.jpg" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="prev">
@@ -139,49 +156,57 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     &nbsp;
     <div>
       <h2 class="text-white">Watch it Again</h2>
     </div>
     <div id="carouselExampleAutoplaying2" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active d-lg-flex">
-          <img src="assets/img/media/media10.jpg" class="d-block w-50" alt="...">
-
-
-          <img src="assets/img/media/media30.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media27.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media29.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media32.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media22.webp" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media30.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media14.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media31.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media32.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2   p-1">
+              <img src="assets/img/media/media13.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media23.webp" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-        <div class="carousel-item  d-lg-none">
-          <img src="assets/img/media/media9.jpg" class="d-block w-50"  alt="...">
-
-
-          <img src="assets/img/media/media14.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media18.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media20.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media15.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media11.jpg" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media2.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media20.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media21.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media22.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media10.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media24.jpg" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2"
         data-bs-slide="prev">
@@ -200,43 +225,50 @@
     </div>
     <div id="carouselExampleAutoplaying3" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active d-lg-flex">
-          <img src="assets/img/media/media10.jpg" class="d-block w-50" alt="...">
-
-
-          <img src="assets/img/media/media13.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media32.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media23.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media4.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media5.webp" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media10.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media21.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media22.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media18.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media19.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2  p-1">
+              <img src="assets/img/media/media12.jpg" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-        <div class="carousel-item  d-lg-none">
-          <img src="assets/img/media/media10.jpg" class="d-block w-50" alt="...">
-
-
-          <img src="assets/img/media/media1.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media2.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media3.webp" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media4.jpg" class="d-block w-50 mt-1" alt="...">
-
-
-          <img src="assets/img/media/media5.webp" class="d-block w-50 mt-1" alt="...">
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media15.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media31.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media6.jpg" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media7.webp" class="d-block w-100 " alt="...">
+            </div>
+            <div class="col-lg-2 col-md-2 p-1">
+              <img src="assets/img/media/media8.webp" class="d-block w-100 " alt="...">
+            </div>
+          </div>
         </div>
-
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying3"
         data-bs-slide="prev">
@@ -252,55 +284,65 @@
   </main>
 
   &nbsp;
-  <footer class="container-fluid text-secondary d-lg-flex justify-content-lg-between">
+  <footer>
 
-    <div class=" ">
+    <div
+      class="container-fluid text-secondary  d-lg-flex justify-content-lg-between d-md-flex justify-content-md-between ">
+
 
       <div>
-        <i class="bi bi-facebook mx-1"></i>
-        <i class="bi bi-instagram mx-1"></i>
-        <i class="bi bi-twitter-x mx-1"></i>
-        <i class="bi bi-youtube mx-1"></i>
+        <div>
+          <a href="https://www.facebook.com/netflixitalia/?locale=it_IT" target="_blank"><i
+              class="bi bi-facebook mx-1 text-secondary"></i></a>
+          <a href="https://www.instagram.com/netflixit/" target="_blank"><i
+              class="bi bi-instagram mx-1 text-secondary"></i></a>
+          <a href="https://twitter.com/NetflixIT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            target="_blank"><i class="bi bi-twitter-x mx-1 text-secondary"></i></a>
+          <a href="https://www.youtube.com/@netflixitalia" target="_blank"><i
+              class="bi bi-youtube mx-1 text-secondary"></i></a>
+        </div>
+        <p>Audio and Subtitles</p>
+        <p>Media Center</p>
+        <p>Privacy</p>
+        <p>Contact Us</p>
+        <button class="bg-black text-secondary border-secondary mb-3 p-2" style="border:solid 1px">
+          <p class="m-0">Service Code</p>
+        </button>
+        <p>&copy;1997-2021 Netflix Inc</p>
+      </div>
+
+
+
+      <div>
+        <p>Audio description</p>
+        <p>Investor Relations</p>
+        <p>Legal Notices</p>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div>
+        <p>Help Center</p>
+        <p>Jobs</p>
+        <p>Coockie Preferences</p>
       </div>
 
 
       <div>
-        <p>Gift Cards</p>
-        <p>Term Of Use</p>
-        <p>Corporate Information</p>
+        <div>
+          <p>Gift Cards</p>
+          <p>Term Of Use</p>
+          <p>Corporate Information</p>
+        </div>
+
       </div>
-      <button class="bg-black text-secondary border-secondary h-25" style="border:solid 1px">Service Code</button>
-      <p>&copy;1997-2021 Netflix Inc</p>
     </div>
-
-    <div>
-      <p>Audio description</p>
-      <p>Investor Relations</p>
-      <p>Legal Notices</p>
-    </div>
-
-
-
-
-    <div>
-      <p>Audio and Subtitles</p>
-      <p>Media Center</p>
-      <p>Privacy</p>
-      <p>Contact Us</p>
-    </div>
-
-
-
-
-
-    <div>
-      <p>Help Center</p>
-      <p>Jobs</p>
-      <p>Coockie Preferences</p>
-    </div>
-
-
-
 
 
 

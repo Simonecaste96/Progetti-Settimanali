@@ -1,7 +1,55 @@
-#logo{
+#logo {
     width: 200px;
 }
 
-#avatar{
+#avatar {
     width: 50px;
+}
+
+#carouselExampleAutoplaying img {
+    opacity: 0.8;
+}
+
+#carouselExampleAutoplaying img:hover {
+    opacity: 1;
+    scale: 1.05;
+}
+
+#carouselExampleAutoplaying2 img {
+    opacity: 0.8;
+}
+
+#carouselExampleAutoplaying2 img:hover {
+    opacity: 1;
+    scale: 1.05;
+}
+
+
+#carouselExampleAutoplaying3 img {
+    opacity: 0.8;
+}
+
+#carouselExampleAutoplaying3 img:hover {
+    opacity: 1;
+    scale: 1.05;
+}
+
+p:hover {
+    color: white;
+    cursor: pointer;
+}
+
+i:hover {
+    color: white !important;
+    cursor: pointer;
+
+}
+
+@media (max-width: 767px) {
+
+    #carouselExampleAutoplaying,
+    #carouselExampleAutoplaying2,
+    #carouselExampleAutoplaying3 {
+        max-width: 50%;
+    }
 }
