@@ -1,0 +1,13 @@
+html, body{
+margin: 0 auto;
+padding:0;
+box-sizing: border-box;
+}
+
+.logo{
+    width: 150px;
+}
+
+header{
+    background-color: #131921;
+}
