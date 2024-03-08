@@ -43,7 +43,7 @@ const get = async () => {
     const price = contenitore[i].price;
     const div = document.createElement('div');
     div.classList.add('row');
-    div.innerHTML= `<div class="card" style="width: 18rem; id=${id}">
+    div.innerHTML= `<div class="card" style="width: 18rem;" id=${id}>
     <img src="${imgUrl}" class="card-img-top" alt="${name}">
     <div class="card-body">
       <h5 class="card-title">${name}</h5>
@@ -56,26 +56,69 @@ const get = async () => {
   </div>`;
 
   row.appendChild(div);
-
+  
   }  
   };
 
 
 
 
-  const put = async () => {
-    try {
-      let content = await fetch(URL , {
-        method: 'PUT',
-        headers: {
-          Authorization: API_KEY,
-        },
-      });
-      let search = await content.json();
-      console.log(search)
-    }
-    catch (error) {
-      console.log(error);
-    }
+
+
+
+
+
+
+
+
+
+
+modifica.addEventListener('click', function (e) {
+  e.preventDefault();
+  let nameValue = nameBack.value;
+  let modelValue = modelBack.value;
+  let priceValue = priceBack.value;
+  let urlValue = urlBack.value;
+  let descriptionValue = descriptionBack.value;
+
+  const data = {
+
+    "name": `${nameValue}`,
+    "brand": `${modelValue}`,
+    "imageUrl": `${urlValue}`,
+    "price": `${priceValue}`,
+    "description": `${descriptionValue}`
+
   };
+
+  put(data);
+});
+
+
+
+
+
+const put = async (a) => {
+
+  try {
+     await fetch(URL , {
+      method: 'PUT',
+      headers: {
+        Authorization: API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(a) 
+    });
+   
+    console.log(data)
+  }
+  catch (error) {
+    console.log(error);
+  }
+};
+
+
+
+
+
   

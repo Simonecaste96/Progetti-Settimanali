@@ -12,7 +12,7 @@ const form = document.getElementById('form');
 
 
 
-
+//Inizia la POST
 const post = async (a) => {
 
   try {
@@ -36,6 +36,10 @@ const post = async (a) => {
     console.log('Errore nella richiesta POST: ' + error);
   }
 };
+
+
+
+//Faccio rimanere in ascolto il bottone salva, al click parte la funzione POST
 save.addEventListener('click', function (e) {
   e.preventDefault();
   let nameValue = nameBack.value;
@@ -59,4 +63,7 @@ save.addEventListener('click', function (e) {
 function dell() {
   form.reset()
 }
+
+
+
 
