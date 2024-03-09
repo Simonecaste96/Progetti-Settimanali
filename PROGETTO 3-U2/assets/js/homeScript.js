@@ -6,16 +6,16 @@ let contenitore = [];
 
 
 
-
+//Al termine del aricmaento della pagina chiamo la funzione initi che a sua vlta chiama la funzione GET
 
 window.addEventListener('load', init);
 
-
+//Invoca funzione GET
 function init(){
-get();
+GET();
 }
-
-const get = async () => {
+//Fuzione asincrona GET che scarica la base dati ed al termine invoca la funzione popolation(), alla quale viene passato come paramentro il json scaricato.
+const GET = async () => {
     try {
       let contentGet = await fetch(URL , {
         method: 'GET',
@@ -26,13 +26,18 @@ const get = async () => {
       let search = await contentGet.json();
       contenitore = search;
       console.log(search)
-      popolation(search);
+      popolation(search);      //Passiamo il parametro "search" che sarebbe il json scaricato con la GET
     }
     catch (error) {
       console.log(error);
     }
   };
 
+
+
+
+
+//Inizia la funzione popolation, destutturo il json e creo una card in HTML nella quale andro a inserire le porprietà dell'oggetto destrutturato.
   const popolation = async ()=>{
   for (let i = 0; i < contenitore.length; i++) {
     const id = contenitore[i]._id;
@@ -41,8 +46,8 @@ const get = async () => {
     const brand = contenitore[i].brand;
     const imgUrl = contenitore[i].imageUrl;
     const price = contenitore[i].price;
-    const div = document.createElement('div');
-    div.classList.add('row');
+    const div = document.createElement('div');         //Creo un div nell'html, sul quale anrò ad "appendere" la card con i suo dati destrutturati
+    div.classList.add('row');                     
     div.innerHTML= `<div class="card" style="width: 18rem;" id=${id}>
     <img src="${imgUrl}" class="card-img-top" alt="${name}">
     <div class="card-body">
@@ -68,7 +73,7 @@ const get = async () => {
 
 
 
-
+//la funzione put permette di modificare un oggetto ma in che modo? 
 
 
 
