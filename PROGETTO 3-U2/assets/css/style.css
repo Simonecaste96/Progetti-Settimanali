@@ -16,3 +16,13 @@ header{
     height: 15vh;
 }
 
+main{
+    border: solid 1px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#del{
+display: none;    
+}
+

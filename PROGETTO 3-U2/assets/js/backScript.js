@@ -9,7 +9,7 @@ const urlBack = document.getElementById('url');
 const descriptionBack = document.getElementById('description');
 const form = document.getElementById('form');
 const h1 = document.getElementById('h1');
-const del = document.createElement('button');
+const del = document.getElementById('del');
 
 
 
@@ -36,9 +36,8 @@ async function pageMod() {
 
 //Dato che ho cliccato su modifica, l'h1 cambia e creo anche il button Elimina prodotto per la function DELETE, in modo da gestire direttamente il prodotto selezionato!
  h1.innerText = 'Modifica prodotto';
- save.innerText = 'Salva le modifiche'
- del.innerText = 'Elimina prodotto dalla base dati'
- form.appendChild(del)
+ save.innerText = 'Salva le modifiche';
+ del.style.display = 'inline';
 
 
 
@@ -157,8 +156,12 @@ POST(data);
 //Se decido di cancellare il prodotto nessun problema, il click avvia la funzione DELETE
 del.addEventListener('click', function (e){
 e.preventDefault();
+let conferma = window.confirm("Sei sicuro? Il prodotto non sarà più recuperabile!")
+if(conferma){
 DELETE(urlIdParametro);
-h1.innerText = 'Prodotto eliminato!'
+h1.innerText = 'Prodotto eliminato!'  
+}
+
 });
 
 

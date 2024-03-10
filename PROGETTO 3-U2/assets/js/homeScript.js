@@ -48,7 +48,7 @@ const GET = async () => {
     const price = contenitore[i].price;
     const div = document.createElement('div');         //Creo un div nell'html, sul quale anrò ad "appendere" la card con i suo dati destrutturati
     div.classList.add('row');                     
-    div.innerHTML= `<div class="card" style="width: 18rem;" id=${id}>
+    div.innerHTML= `<div class="card my-2" style="width:18rem;" id=${id}>
     <img src="${imgUrl}" class="card-img-top" alt="${name}">
     <div class="card-body">
       <h5 class="card-title">${name}</h5>
