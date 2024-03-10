@@ -50,8 +50,8 @@ function dettagli(){
       const url = product.imageUrl;
       const description = product.description;
       
-    divSpecifiche.innerHTML = `<div class="card mt-4 d-flex flex-row">
-    <div><img src="${url}" class="card-img-top w-100" alt="${nameModel}"></div>
+    divSpecifiche.innerHTML = `<div class="card d-flex flex-row">
+    <div><img src="${url}" class="card-img-top w-100 p-5" alt="${nameModel}"></div>
   <div class="card-body">
     <p class="card-text">${model}</p>
     <h4 class="card-title">${nameModel}</h4>

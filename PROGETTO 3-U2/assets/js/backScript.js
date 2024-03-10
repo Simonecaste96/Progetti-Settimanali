@@ -159,7 +159,7 @@ e.preventDefault();
 let conferma = window.confirm("Sei sicuro? Il prodotto non sarà più recuperabile!")
 if(conferma){
 DELETE(urlIdParametro);
-h1.innerText = 'Prodotto eliminato!'  
+h1.innerText = 'Prodotto eliminato!'
 }
 
 });
