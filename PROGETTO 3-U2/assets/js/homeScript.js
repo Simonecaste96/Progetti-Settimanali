@@ -61,66 +61,11 @@ const GET = async () => {
   </div>`;
 
   row.appendChild(div);
+
   
   }  
   };
 
-
-
-
-
-
-
-
-
-//la funzione put permette di modificare un oggetto ma in che modo? 
-
-
-
-
-modifica.addEventListener('click', function (e) {
-  e.preventDefault();
-  let nameValue = nameBack.value;
-  let modelValue = modelBack.value;
-  let priceValue = priceBack.value;
-  let urlValue = urlBack.value;
-  let descriptionValue = descriptionBack.value;
-
-  const data = {
-
-    "name": `${nameValue}`,
-    "brand": `${modelValue}`,
-    "imageUrl": `${urlValue}`,
-    "price": `${priceValue}`,
-    "description": `${descriptionValue}`
-
-  };
-
-  put(data);
-});
-
-
-
-
-
-const put = async (a) => {
-
-  try {
-     await fetch(URL , {
-      method: 'PUT',
-      headers: {
-        Authorization: API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(a) 
-    });
-   
-    console.log(data)
-  }
-  catch (error) {
-    console.log(error);
-  }
-};
 
 
 
