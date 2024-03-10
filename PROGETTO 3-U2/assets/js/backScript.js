@@ -30,50 +30,90 @@ function init(){
 
 
 
+async function pageMod() {
+  //Se nel'url c'è la query, parte la funzione e scarico i dati da gestire. 
+ if(query){
 
-
-
-
-
-function pageMod(){
-//Se nel'url c'è la query, l'h1 diventa modifica prodotto, altrimenti rimane invariato. 
-if(query){
-
- //Dato che ho cliccato su modifica, l'h1 cambia ma creo anche il button Elimina prodotto per la function DELETE, in modo da gestire direttamente il prodotto selezionato!
-h1.innerText = 'Modifica prodotto';
-save.innerText = 'Salva le modifiche'
-del.innerText = 'Elimina prodotto dalla base dati'
-form.appendChild(del)
+//Dato che ho cliccato su modifica, l'h1 cambia e creo anche il button Elimina prodotto per la function DELETE, in modo da gestire direttamente il prodotto selezionato!
+ h1.innerText = 'Modifica prodotto';
+ save.innerText = 'Salva le modifiche'
+ del.innerText = 'Elimina prodotto dalla base dati'
+ form.appendChild(del)
 
 
 
 // Effettuo la richiesta al server per ottenere i dettagli del prodotto che voglio modificare!
-fetch(`${URL}/${urlIdParametro}`, {
-  headers: {
-    "Content-Type": "application/json",
-      Authorization: API_KEY,
-  },
-})
-.then(response => {
-  if (response.ok) {
-  return response.json();    
+  try {
+    const response = await fetch(`${URL}/${urlIdParametro}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: API_KEY,
+      },
+    });
+    if (response.ok) {
+      console.log('Richiesta dettagli prodotto effettuata con successo!')
+    }
+    else {
+      console.log('Errore nella richiesta dettagli prodotto: ' + response.status);
+    }
+
+    const product = await response.json();
+
+    // Popola il form con i dettagli del prodotto ottenuti dalla risposta del server...
+    nameBack.value = product.name;
+    modelBack.value = product.brand;
+    priceBack.value = product.price;
+    urlBack.value = product.imageUrl;
+    descriptionBack.value = product.description;
+
+  } catch (error) {
+    console.error('Errore durante la richiesta dei dettagli del prodotto: ' + error);
   }
-  
-})
-
-// Popolo il form con i dettagli del prodotto ottenuti dalla risposta del server....
-.then(product => {
-  
-  nameBack.value = product.name;
-  modelBack.value = product.brand;
-  priceBack.value = product.price;
-  urlBack.value = product.imageUrl;
-  descriptionBack.value = product.description;
-});
-
 }
-
 };
+
+
+
+
+// function pageMod(){
+// //Se nel'url c'è la query, parte la funzione e scarico i dati da gestire. 
+// if(query){
+
+//  //Dato che ho cliccato su modifica, l'h1 cambia ma creo anche il button Elimina prodotto per la function DELETE, in modo da gestire direttamente il prodotto selezionato!
+// h1.innerText = 'Modifica prodotto';
+// save.innerText = 'Salva le modifiche'
+// del.innerText = 'Elimina prodotto dalla base dati'
+// form.appendChild(del)
+
+
+
+// // Effettuo la richiesta al server per ottenere i dettagli del prodotto che voglio modificare!
+// fetch(`${URL}/${urlIdParametro}`, {
+//   headers: {
+//     "Content-Type": "application/json",
+//       Authorization: API_KEY,
+//   },
+// })
+// .then(response => {
+//   if (response.ok) {
+//   return response.json();    
+//   }
+  
+// })
+
+// // Popolo il form con i dettagli del prodotto ottenuti dalla risposta del server....
+// .then(product => {
+  
+//   nameBack.value = product.name;
+//   modelBack.value = product.brand;
+//   priceBack.value = product.price;
+//   urlBack.value = product.imageUrl;
+//   descriptionBack.value = product.description;
+// });
+
+// }
+
+// };
 
 
 
@@ -104,8 +144,7 @@ POST(data);
   else{
     PUT(urlIdParametro, data);  
   }
-//All'invio del form resetto tutto!
-dell();
+
 });
 
 
@@ -119,7 +158,7 @@ dell();
 del.addEventListener('click', function (e){
 e.preventDefault();
 DELETE(urlIdParametro);
-
+h1.innerText = 'Prodotto eliminato!'
 });
 
 
@@ -138,9 +177,11 @@ const POST = async (a) => {
       body: JSON.stringify(a)
     });
     if (contentPOST.ok) {
-      console.log('Richiesta POST effettuata con successo!')
+      h1.innerText = 'Prodotto aggiunto!';
+      console.log('Richiesta POST effettuata con successo!');
     }
     else {
+      h1.innerText = 'Ops.. qualcosa è andato storto!! ' + contentPOST.status;
       console.log('Errore nella richiesta POST: ' + contentPOST.status);
     }
 
@@ -168,9 +209,11 @@ const PUT = async (id, data) => {
     });
    
     if (contentPUT.ok) {
-      console.log('Richiesta PUT effettuata con successo!')
+      h1.innerText = 'Prodotto modificato!';
+      console.log('Richiesta PUT effettuata con successo!');
     }
     else {
+      h1.innerText = 'Ops.. qualcosa è andato storto!! ' + contentPUT.status;
       console.log('Errore nella richiesta PUT: ' + contentPUT.status);
     }
   }
@@ -195,9 +238,11 @@ const DELETE = async (id) => {
     });
    
     if (contentDELETE.ok) {
-      console.log('Richiesta DELETE effettuata con successo!')
+      h1.innerText = 'Prodotto eliminato!';
+      console.log('Richiesta DELETE effettuata con successo!');
     }
     else {
+      h1.innerText = 'Ops.. qualcosa è andato storto!! ' + contentDELETE.status;
       console.log('Errore nella richiesta DELETE: ' + contentDELETE.status);
     }
   }
@@ -211,11 +256,11 @@ const DELETE = async (id) => {
 
 
 
-//Funzione che resetta il form
-function dell() {
-  nameBack.value = ''; 
-  modelBack.value = ''; 
-  priceBack.value = ''; 
-  urlBack.value = ''; 
-  descriptionBack.value = ''; 
-}
+// //Funzione che resetta il form
+// function dell() {
+//   nameBack.value = ''; 
+//   modelBack.value = ''; 
+//   priceBack.value = ''; 
+//   urlBack.value = ''; 
+//   descriptionBack.value = ''; 
+// }
