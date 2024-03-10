@@ -9,7 +9,7 @@ const urlBack = document.getElementById('url');
 const descriptionBack = document.getElementById('description');
 const form = document.getElementById('form');
 const h1 = document.getElementById('h1');
-
+const del = document.createElement('button');
 
 
 
@@ -28,13 +28,23 @@ function init(){
   pageMod();
 }
 
-//Se nel'url c'è la query, l'h1 diventa modifica prodotto, altrimenti rimane invariato.
-function pageMod(){
-  
-  if(query){
 
- //Modifica l'h1 e prendi i dati name,brand,imageUrl,price,description che hanno l'id che si trova nell'a query   
+
+
+
+
+
+
+function pageMod(){
+//Se nel'url c'è la query, l'h1 diventa modifica prodotto, altrimenti rimane invariato. 
+if(query){
+
+ //Dato che ho cliccato su modifica, l'h1 cambia ma creo anche il button Elimina prodotto per la function DELETE, in modo da gestire direttamente il prodotto selezionato!
 h1.innerText = 'Modifica prodotto';
+save.innerText = 'Salva le modifiche'
+del.innerText = 'Elimina prodotto dalla base dati'
+form.appendChild(del)
+
 
 
 // Effettuo la richiesta al server per ottenere i dettagli del prodotto che voglio modificare!
@@ -50,8 +60,10 @@ fetch(`${URL}/${urlIdParametro}`, {
   }
   
 })
+
+// Popolo il form con i dettagli del prodotto ottenuti dalla risposta del server....
 .then(product => {
-  // Popolo il form con i dettagli del prodotto ottenuti dalla risposta del server....
+  
   nameBack.value = product.name;
   modelBack.value = product.brand;
   priceBack.value = product.price;
@@ -67,7 +79,7 @@ fetch(`${URL}/${urlIdParametro}`, {
 
 
 
-//Faccio rimanere in ascolto il bottone salva, al click parte la funzione POST oppure la PUT
+//Faccio rimanere in ascolto il bottone salva, al click parte la funzione POST oppure la PUT!
 save.addEventListener('click', function (e) {
   e.preventDefault();
   let nameValue = nameBack.value;
@@ -103,8 +115,17 @@ dell();
 
 
 
+//Se decido di cancellare il prodotto nessun problema, il click avvia la funzione DELETE
+del.addEventListener('click', function (e){
+e.preventDefault();
+DELETE(urlIdParametro);
 
-//Funzione POST
+});
+
+
+
+
+//Funzione POST, passo i dati come parametri e parte!
 const POST = async (a) => {
 
   try {
@@ -160,7 +181,37 @@ const PUT = async (id, data) => {
 
 
 
+//Passo le info dai parametri, stessa cosa della PUT!!!
+const DELETE = async (id) => {
 
+  try {
+     const contentDELETE = await fetch(`${URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: API_KEY,
+        'Content-Type': 'application/json'
+      }
+      
+    });
+   
+    if (contentDELETE.ok) {
+      console.log('Richiesta DELETE effettuata con successo!')
+    }
+    else {
+      console.log('Errore nella richiesta DELETE: ' + contentDELETE.status);
+    }
+  }
+  catch (error) {
+    console.log('Errore nella richiesta DELETE: ' + error);
+  }
+};
+
+
+
+
+
+
+//Funzione che resetta il form
 function dell() {
   nameBack.value = ''; 
   modelBack.value = ''; 
