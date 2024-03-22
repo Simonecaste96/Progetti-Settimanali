@@ -1,0 +1,10 @@
+<div class="container" *ngFor="let basedate of basedates">
+    <div class="card" style="width: 18rem;" *ngIf="basedate.brand == 'Audi' ">
+        <img src="https://www.kimballstock.com/pix/car/p/{{basedate.modelImage}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{basedate.model}}</h5>
+          <p class="card-text">{{basedate.description}}</p>
+          <a href="#" class="btn btn-primary">Prenota ora!</a>
+        </div>
+      </div>
+</div>

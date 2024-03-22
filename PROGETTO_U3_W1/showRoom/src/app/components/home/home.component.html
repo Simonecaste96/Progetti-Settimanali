@@ -1,0 +1,30 @@
+<div class="container-fluid text-center">
+  <div class="container">
+    <h1>Il nostro autosalone, il tuo autosalone di fiducia!</h1>
+    <h3>Marchi disponibili:</h3>
+    <div *ngFor="let basedate of basedates">
+      <img *ngIf="!basedate.available" class="w-25" src="https://listcarbrands.com/wp-content/uploads/{{basedate.brandLogo}}"/>
+  </div>
+
+  <div class="container">
+    <h3>Auto in evidenza</h3>
+
+    <div class="d-flex justify-content-center" >
+      <div class="card" style="width: 18rem" *ngFor="let basedate of basedates">
+        <img src="https://www.kimballstock.com/pix/car/p/{{basedate.modelImage}}" class="card-img-top" alt="{{basedate.model}}" />
+        <div class="card-body">
+          <h5 class="card-title">{{basedate.brand}}</h5>
+          <h5 class="card-title">{{basedate.model}}</h5>
+          <p class="card-text">
+            Anno: {{basedate.year}}
+          </p>
+          <p class="card-text">
+            Prezzo: {{basedate.price}} €
+          </p>
+          <a class="btn btn-primary">Pagina il lavorazione, torna a trovarci domani (forse)</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
