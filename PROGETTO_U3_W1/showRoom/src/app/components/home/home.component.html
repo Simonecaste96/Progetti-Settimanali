@@ -2,10 +2,11 @@
   <div class="container">
     <h1>Il nostro autosalone, il tuo autosalone di fiducia!</h1>
     <h3>Marchi disponibili:</h3>
-    <div *ngFor="let basedate of basedates">
-      <img *ngIf="!basedate.available" class="w-25" src="https://listcarbrands.com/wp-content/uploads/{{basedate.brandLogo}}"/>
+    <div class="d-flex">
+    <div  *ngFor="let basedate of basedates">
+      <img *ngIf="!basedate.available" class="w-50" src="https://listcarbrands.com/wp-content/uploads/{{basedate.brandLogo}}"/>
   </div>
-
+</div>
   <div class="container">
     <h3>Auto in evidenza</h3>
 

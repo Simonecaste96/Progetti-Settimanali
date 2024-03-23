@@ -1,3 +1,5 @@
+
+<div class="d-flex">
 <div class="container" *ngFor="let basedate of basedates">
     <div class="card" style="width: 18rem;" *ngIf="basedate.brand == 'Fiat' ">
         <img src="https://www.kimballstock.com/pix/car/p/{{basedate.modelImage}}" class="card-img-top" alt="...">
@@ -7,4 +9,5 @@
           <a href="#" class="btn btn-primary"[class.btn-danger]="!basedate.available" > {{ basedate.available ? 'Prenota ora!' : 'Non disponibile' }} </a>
         </div>
       </div>
+</div>
 </div>
