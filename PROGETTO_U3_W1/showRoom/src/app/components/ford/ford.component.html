@@ -3,8 +3,10 @@
     <div *ngIf="basedate.brand == 'Ford'" class="card" style="width: 18rem;">
       <img src="https://www.kimballstock.com/pix/car/p/{{basedate.modelImage}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{basedate.model}}</h5>
-        <p class="card-text">{{basedate.description}}</p>
+        <h5 class="card-title">Marca:<span><img class="w-25" src="https://listcarbrands.com/wp-content/uploads/{{basedate.brandLogo}}"  alt="{{basedate.brand}}"/></span></h5>
+        <p class="card-text">Modello: {{basedate.model}}</p>
+        <p class="card-text">Anno: {{basedate.year}}</p>
+        <p class="card-text">Prezzo: {{basedate.price}}€</p>
         <a [routerLink]="['/a']" class="btn btn-primary" [class.btn-danger]="!basedate.available">
           {{ basedate.available ? 'Prenota ora!' : 'Non disponibile' }}
         </a>

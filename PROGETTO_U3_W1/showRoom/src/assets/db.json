@@ -7,7 +7,7 @@
         "year": 2015,
         "price": 7500,
         "available": false,
-        "description": "Se non vuoi arrivare a destinazione, è perfetta per te!"
+        "description": "Un'auto per coloro che vogliono fare una pausa lungo il viaggio!"
     },
     {
         "brand": "Fiat",
@@ -17,7 +17,7 @@
         "year": 2010,
         "price": 3500,
         "available": true,
-        "description": "Ma che carino!!!!"
+        "description": "Scopri il lato sportivo della guida con questa piccola ma grintosa vettura!"
     },
     {
         "brand": "Ford",
@@ -27,7 +27,7 @@
         "year": 2009,
         "price": 5200,
         "available": false,
-        "description": "Con questa si vola"
+        "description": "Senti il vento tra i capelli con questa potente auto!"
     },
     {
         "brand": "Ford",
@@ -37,7 +37,7 @@
         "year": 2014,
         "price": 9700,
         "available": true,
-        "description": "Ottima per neo patentati, casi disperati, viaggi brevi, controllare l'acqua prima di partire"
+        "description": "Per chi ama l'avventura e vuole iniziare il viaggio con stile!"
     },
     {
         "brand": "Audi",
@@ -47,7 +47,7 @@
         "year": 2012,
         "price": 4300,
         "available": true,
-        "description": "Ora puoi fare il fighetto con i tuoi amici"
+        "description": "Abbraccia il lusso e la potenza con questa elegante vettura!"
     },
     {
         "brand": "Audi",
@@ -57,6 +57,6 @@
         "year": 2020,
         "price": 41700,
         "available": false,
-        "description": "Con questa vai lontano"
+        "description": "Entra nel mondo dell'avventura con questa spaziosa e potente SUV!"
     }
 ]

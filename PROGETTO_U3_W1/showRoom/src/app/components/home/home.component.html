@@ -14,8 +14,8 @@
       <div class="card" style="width: 18rem" *ngFor="let basedate of basedatesRandom">
         <img src="https://www.kimballstock.com/pix/car/p/{{basedate.modelImage}}" class="card-img-top" alt="{{basedate.model}}" />
         <div class="card-body">
-          <h5 class="card-title">{{basedate.brand}}</h5>
-          <h5 class="card-title">{{basedate.model}}</h5>
+          <h5 class="card-title">Marca:<span><img class="w-25" src="https://listcarbrands.com/wp-content/uploads/{{basedate.brandLogo}}" alt="{{basedate.brand}}"/></span></h5>
+          <p class="card-text">Modello: {{basedate.model}}</p>
           <p class="card-text">
             Anno: {{basedate.year}}
           </p>
