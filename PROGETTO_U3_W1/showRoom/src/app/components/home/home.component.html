@@ -19,10 +19,11 @@
           <p class="card-text">
             Anno: {{basedate.year}}
           </p>
-          <p class="card-text">
-            Prezzo: {{basedate.price}} €
-          </p>
-          <a [routerLink]="['/a']" class="btn btn-primary">Pagina il lavorazione, torna a trovarci domani (forse)</a>
+          <p class="card-text text-danger">Prezzo: {{basedate.price}}€</p>
+        <p class="card-text fw-bold">
+          {{basedate.description}}
+        </p>
+          <a [routerLink]="['/a']" class="btn btn-primary">Pagina il lavorazione, torna a trovarci</a>
         </div>
       </div>
       
