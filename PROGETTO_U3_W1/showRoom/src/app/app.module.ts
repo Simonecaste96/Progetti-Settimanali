@@ -31,7 +31,8 @@ const routes: Routes = [
     FooterComponent,
     FordComponent,
     FiatComponent,
-    AudiComponent
+    AudiComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

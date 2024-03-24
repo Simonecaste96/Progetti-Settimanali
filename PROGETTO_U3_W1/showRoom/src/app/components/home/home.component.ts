@@ -9,25 +9,25 @@ import { BaseDate } from 'src/app/models/base-date';
 
 export class HomeComponent {
   basedates!:BaseDate[];
+  basedatesRandom! : BaseDate[];
   
 
   constructor() {
       this.getBaseDate().then((data) => {
           this.basedates = data;
-      for (let i = 0; i < data.length; i++) {
-        let brand = this.basedates[i].brand;
-        let brandLogo = this.basedates[i].brandLogo;
-        let model = this.basedates[i].model;
-        let modelImage = this.basedates[i].modelImage;
-        let year = this.basedates[i].year;
-        let price = this.basedates[i].price;
-        let avaible = this.basedates[i].available;
-        
-      }
-      
+          this.random(data)
         });
       
   }
+
+random(data:[])  {
+ // Mescola l'array casualmente
+ data.sort(() => Math.random() - 0.5);
+  
+ // Estrai i primi due elementi dall'array casualmente mescolato
+ this.basedatesRandom = data.slice(0, 2);
+
+}
 
   async getBaseDate() {
     
